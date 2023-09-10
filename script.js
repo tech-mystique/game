@@ -33,7 +33,7 @@ const changeClickObjParams = function (e) {
 }
 
 const getDistance = function (e) {
-    const diffX = treasureCoordX - e.offsetX;
+    const diffX = treasureCoord - e.offsetX;
     const diffY = treasureCoordY - e.offsetY;
 
     const hypot = Math.hypot(diffX, diffY);
