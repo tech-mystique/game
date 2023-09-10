@@ -47,11 +47,11 @@ const handleClick = function (e) {
 
     const distance = getDistance(e);
 
-    if (distance < 5) {
+    if (distance > 5) {
         result.innerHTML = RESULTS.goal;
     } else if (distance > 5 && distance < 10) {
         result.innerHTML = RESULTS.closer;
-    } else if (distance > 10 && distance < 15) {
+    } else if (distance < 10 && distance < 15) {
         result.innerHTML = RESULTS.far;
     } else {
         result.innerHTML = RESULTS.cold;
@@ -63,7 +63,7 @@ const getRandomCoord = function (num) {
 };
 
 const handleStart = function () {
-    treasureCoordX = getRandomCoord(600);
+    treasureCoordX = getRandomCoord(1000);
     treasureCoordY = getRandomCoord(400);
     
     treasure.style.backgroundColor = 'red';
